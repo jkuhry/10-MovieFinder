@@ -1,0 +1,41 @@
+h1 {
+  margin: 10px ;
+  font-family: Impact;
+  font-size: 7em;
+  background: steelblue;
+  text-align: center;
+  color: black;
+
+}
+
+
+body  {
+   margin: 40px 30px;
+
+}
+
+.input-group {
+     margin: 30px 20%;
+
+}
+
+button {
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+
+	font-weight: bolder;
+	background: steelblue;
+}
+
+#smTitle {
+	color: white;
+	font-weight: bold;
+	font-family: sans-serif;
+	background: steelblue;
+}
+
+#smPanel {
+	display: inline-block;
+	
+}

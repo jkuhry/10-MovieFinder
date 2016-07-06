@@ -1,0 +1,45 @@
+<div class="container stateTemplates">
+	<div ng-hide="vm.loading" class="col-xs-4">
+		<div class="panel panel-info moviePosterImage">
+			<div class="panel-body">
+			  
+					<img ng-if="data.Poster != 'N/A'" ng-src="{{vm.movieDetail.Poster}}" height="400" width="270">
+					<div>
+					<img ng-if="data.Poster === 'N/A'" ng-src="/app/img/noPhoto.png" height="400" width="270">
+					</div>
+					</div>
+				</div>
+			</div>
+			<div ng-hide="vm.loading" class="col-xs-8">
+				<div class="panel panel-info movieDetailText">
+					<div class="panel-body">
+					<div>
+					<h2>{{vm.movieDetail.Title}}</h2>
+					<p>Released on: {{vm.movieDetail.Released}} / Runtime: {{vm.movieDetail.Runtime}}</p></br>
+				</div>
+				<p>{{vm.movieDetail.Plot}}</p></br>
+				<p>Director: {{vm.movieDetail.Director}}</p>
+				<p>Actors: {{vm.movieDetail.Actors}}</p>
+				<p>Genre: {{vm.movieDetail.Genre}}</p></br>
+				<p>Year made: {{vm.movieDetail.Year}}</p>
+				<p>IMDb Rating: {{vm.movieDetail.imdbRating}}
+				<p>Rotten Tomatoes: {{vm.movieDetail.tomatoRating}}</p>
+				<p>Company Production: {{vm.movieDetail.Production}}</p>
+				<a ng-click="searchresults = vm.movieSearchResults.search"  ui-sref="search">Return to Search</a>
+				
+
+
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div ui-view></div>
+
+
+
+
+
+
+	<!-- <span ng-show="vm.loading" us-spinner="{radius:30, width:8, length: 16}"></span> -->

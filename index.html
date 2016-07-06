@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+ <meta charset="UTF-8">
+ <title>Movie Finder</title>
+<!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+<!-- endbower -->
+
+<!-- inject:css -->
+<link rel="stylesheet" href="/app/styles/styles.css">
+<!-- endinject -->
+</head>
+
+<body ng-controller="MovieController as vm">
+
+
+
+ <h1>Find Your Movie</h1>
+ <div class="container">
+        <form ng-submit="vm.onFormSubmit(movieSearch); movieSearch=''" class="input-group" name="searchForm">
+            <input type="text" class="form-control" ng-model="movieSearch" placeholder="Look up a movie...">
+            <span class="input-group-btn">
+            <a ui-sref="search({movieSearch: movieSearch})">
+               <button class="btn btn-secondary" type="button">Go!</button>
+            </a>
+          </span>
+        </form>
+    </div>
+    <div ui-view></div>
+     
+
+
+    <!-- We'll also add some navigation: -->
+    
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<!-- endbower -->
+
+<!-- inject:js -->
+<script src="/app/app.js"></script>
+<script src="/app/movie.controller.js"></script>
+<script src="/app/movie.detail.controller.js"></script>
+<script src="/app/movie.factory.js"></script>
+<!-- endinject -->
+</body>
+</html>
